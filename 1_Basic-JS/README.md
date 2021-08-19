@@ -44,3 +44,37 @@ i++;
 i = i + 1;
 i += 1;
 ```
+
+### Escape Literal Quote
+
+```js
+var myString = "Then Voldemort told, \"Avada kedavera!\"";
+```
+
+**NOTE:** Strings could be made with single quotes as well.
+
+### Escape sequence
+
+- `\'` - single quote
+- `\"` - double quote
+- `\\` - backslash
+- `\n` - newline
+- `\r` - carriage return
+- `\t` - tab
+- `\b` - word boundary
+- `\f` - form feed
+
+### String concatenation
+
+```js
+var myName = "Thanos";
+myName += " Stark";
+```
+
+### String Length
+
+```js
+var myStr = "Hi Bro";
+console.log(myStr.length);
+```
+
