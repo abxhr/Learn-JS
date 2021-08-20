@@ -78,3 +78,58 @@ var myStr = "Hi Bro";
 console.log(myStr.length);
 ```
 
+**NOTE:** Strings in JavaScript are *immutable*. i.e., individual characters of a string cannot be changed.
+
+```js
+var str = "Hi";
+str[0] = "B"; // Not valid
+str = "Bye";  // Valid
+```
+
+## Arrays
+
+Store serveal pieces of data in one place.
+
+```js
+var operatingSystems = ["MacOS", "Windows", "Linux", 1, 2];
+```
+
+You can also nest arrays within arrays.
+
+```js
+var matrix = [[1,"Slack"], [2, "Discord"]];
+```
+
+### `push()`
+
+`push()` function lets you append data to the end of an array.
+
+```js
+var arr = [1, 2];
+arr.push(["What?", "Why?"]);
+// arr = [1, 2, ["What?", Why?"]]
+```
+### `pop()`
+
+`pop()` function is used to pop a value off of the end of an array.
+
+```js
+var arr = [1, 45, 90];
+var data = arr.pop();
+// data = 90
+// arr = [1, 45]
+```
+
+### `shift()`
+
+`shift()` function works just like `pop()`, except that it removes the first element instead if the last.
+
+```js
+var arr = ["Joey", "Ross"];
+var data = arr.shift();
+// data = "Joey"
+// arr = ["Ross"]
+```
+
+### `unshift()`
+
