@@ -133,3 +133,49 @@ var data = arr.shift();
 
 ### `unshift()`
 
+`unshift()` works just like `push()`, but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+
+
+```js
+var lst = ["KFC", "Mcd", "Starbucks"];
+var.unshift(["Popeyes"]);
+// lst = ["Popeyes", "KFC", "Mcd", "Starbucks"]
+```
+
+## Functions
+
+We can break down our code into reusable parts called as Fucntions.
+
+```js
+function reusableFunction() {
+  console.log("Hi World");
+}
+reusableFunction();
+```
+
+### Parameters
+
+Paramteres are variables that are sent as *inputs* to a function, when it is called.
+
+```js
+function functionWithArgs(a, b) {
+  console.log(a + b);
+}
+functionWithArgs("Wingardium", " Leviosa");
+```
+
+## Conditional Logic
+
+### If Statements
+
+In a programming language, it is essential to make decisions, based on some given conditional. Thankfully, `If` statements does just that! 
+
+```js
+function condtionalStat (condition) {
+    if (cond) {
+        return "Condition was true!";
+    }
+    return "Condition was false!";
+}
+```
+
