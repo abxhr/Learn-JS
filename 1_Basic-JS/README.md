@@ -179,3 +179,61 @@ function condtionalStat (condition) {
 }
 ```
 
+#### Equality Operator
+
+Using the equality operator, you could check if two values are the same.
+
+```js
+1 == 1
+// true
+
+2 == 3
+// false
+
+"3" == 3
+// true
+```
+
+- Equality operator changes the type of data, if the values being checked deosn't have the same data type.
+
+#### Strict Equality Operator
+
+To avoid the changing the type of data (*as compared to the last example*), strict equality operator could be used.
+
+```js
+"345" === 345
+// false
+
+345 === 345
+// true
+```
+
+#### Inequality Operator
+
+Similarly like Equality operator, Inequality operator checks if the two given are **not** equal.
+
+```js
+12 != 13
+// true
+
+123 != 123
+// false
+
+"10" != 10
+// false
+```
+
+- Inequality operator changes the type of data, if the values being checked deosn't have the same data type.
+
+#### Strict Inequality Operator
+
+Similarly like Strict Equality Operator, it doesn't change the type of data while checking the values.
+
+```js
+90 !== "90"
+// true
+
+90 !== 90
+// false
+```
+
