@@ -237,3 +237,20 @@ Similarly like Strict Equality Operator, it doesn't change the type of data whil
 // false
 ```
 
+### Switch Statements
+
+If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. 
+
+```js
+switch(myVar) {
+  case "a":
+    console.log("a");
+    break;
+  case "b":
+    console.log("b");
+    break;
+  default:
+    console.log("Invalid!");
+    break;
+}
+```
