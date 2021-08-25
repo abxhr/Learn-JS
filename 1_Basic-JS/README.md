@@ -237,6 +237,27 @@ Similarly like Strict Equality Operator, it doesn't change the type of data whil
 // false
 ```
 
+### Ternary Operator
+
+The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+
+```js
+function lesser(a, b) {
+  return a < b ? "a is lesser" : "b is lesser or equal"; 
+}
+```
+
+### Multiple Ternary Conditions
+
+```js
+function checkSign(num) {
+  return num > 0? "positive": (num === 0)? "zero": "negative";
+}
+
+checkSign(-10);
+// negative
+```
+
 ### Switch Statements
 
 If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. 
@@ -396,5 +417,21 @@ for (var i = 0; i < 3; i++) {
 // 0
 // 1
 // 2
+```
+
+### Do While
+
+It is called a `do...while` loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop `while` the specified condition evaluates to `true`.
+
+```js
+var i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 4);
+// 0
+// 1
+// 2
+// 3
 ```
 
