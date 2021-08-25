@@ -254,3 +254,147 @@ switch(myVar) {
     break;
 }
 ```
+
+## Objects
+
+Objects are similar to `arrays`, except that instead of using indexes to access and modify their data, you access the data in objects through what are called `properties`.
+
+```js
+var book = {
+  "name": "Atomic Habits",
+  author: "James Clear",
+  "pages": 226
+};
+```
+
+- Yep, `JSON`!
+### Accessing Object Properties
+
+The `object` properties could be accessed by using the `.` notation or the `[ ]` notation.
+
+```js
+var anObj = {
+  p1: "val1";
+  p2: "val2";
+};
+
+// Dot notation
+var p1Val = anObj.p1;
+var p2Val = anObj.p2;
+
+// Bracket notation
+var p1ValB = anObj["p1"];
+var p2ValB = anObj["p2"];
+```
+
+### Modifying Object Properties
+
+The object properties could be modified by using the dot or the bracket notation.
+
+```js
+var obj = {
+  "prop1": 12,
+  "prop2": "value"
+};
+
+obj.prop1 = 54;
+obj.prop2 =  "other value";
+```
+
+### Add New Properties
+
+You can add new properties to existing JavaScript objects the same way you would modify them.
+
+```js
+var obj = {
+  "prop1": 12,
+  "prop2": "value"
+};
+
+obj.prop3 = true;
+obj["prop4"] = 1.29;
+```
+
+### Delete Properties
+
+We can delete object properties using the `delete` keyword.
+
+```js
+var obj = {
+  "prop1": 12,
+  "prop2": "value",
+  "prop3": true,
+  "prop4": 1.29
+};
+
+delete obj.prop4;
+delete obj["prop3"];
+```
+
+### Lookup!
+
+Objects can be thought of as a key/value storage, like a dictionary.
+
+```js
+var lookup = {
+  alpha: "Adams",
+  bravo: "Boston",
+  charlie: "Chicago",
+  delta: "Denver",
+  echo: "Easy",
+  foxtrot: "Frank"
+}
+
+console.log(lookup[alpha]);
+// Adams
+```
+
+### Testing Objects
+
+`.hasOwnProperty(pname)` could be used to check if an object has any given property.
+
+```js
+var obj = {
+  "prop1": 12,
+  "prop2": "value",
+  "prop3": true,
+  "prop4": 1.29
+};
+
+obj.hasOwnProperty("prop1");
+// true
+
+obj.hasOwnProperty("something");
+// false
+```
+
+## Loops!
+
+### While Loop
+
+`while` loop keeps running while a specified condition is true, and stops once that conditions is no longer true.
+
+```js
+var i = 0;
+while (i < 5){
+  console.log(i);
+  i++;
+}
+// 0
+// 1
+// 2
+// 3
+// 4
+```
+
+### For Loop
+
+```js
+for (var i = 0; i < 3; i++) {
+  console.log(i);
+}
+// 0
+// 1
+// 2
+```
+
