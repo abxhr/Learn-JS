@@ -25,3 +25,31 @@ const BEST_BRO = "Habibi";
 BEST_BRO = "Habibti";
 // ERROR
 ```
+
+- Arrays and functions assigned to a variable using a `const` are still mutable. Using the `const` declaration only prevents reassignment of the variable identifier.
+
+```js
+const arr = [10, 20, 30];
+arr = [40, 50, 60];
+// ERROR
+
+arr[0] = 1;
+console.log(arr);
+// arr = [1, 20, 30]
+```
+
+## `Object.freeze()`
+
+To ensure your data doesn't change, you could use the function `Object.freeze()` to prevent data mutation.
+
+Once frozen, you won't be able to add, update or delete properties of that object.
+
+```js
+const myObj = {
+    a: 10;
+    b: 20;
+};
+Object.freeze(myObj);
+myObj.b = 324;
+// ERROR;
+```
