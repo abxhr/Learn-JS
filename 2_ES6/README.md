@@ -53,3 +53,40 @@ Object.freeze(myObj);
 myObj.b = 324;
 // ERROR;
 ```
+
+## Arrow Functions
+
+In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions.
+
+```js
+const myValue = function() {
+    const var = "value";
+    return var;
+}
+```
+
+In **ES6**, you can write anonymous functions using the arrow function syntax.
+
+```js
+const myValue = () => {
+    const var = "value";
+    return var;
+}
+```
+
+- You can also pass arguments to an arrow function.
+
+```js
+const square = (number) => number * number;
+square(2);
+```
+
+- You can use default paramters too!
+
+```js
+const sayHi = (name = "Human") => "Hello, " + name;
+
+console.log(sayHi());
+// Hello, Human
+```
+
