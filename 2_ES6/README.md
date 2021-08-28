@@ -90,3 +90,91 @@ console.log(sayHi());
 // Hello, Human
 ```
 
+## Rest Parameter
+
+With rest parameter, you can create functions that take a variable number of arguments.
+
+```js
+function howMany(...args) {
+  return "You have passed " + args.length + " arguments.";
+}
+console.log(howMany(0, 1, 2));
+```
+
+The rest parameter eliminates the need to check the args array and allows us to apply `map()`, `filter()` and `reduce()` on the parameters array.
+
+```js
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+```
+
+## Spread Operator
+
+The spread operator allows you to unpack an array.
+
+```js
+const arr = [3, 5, 2, 4];
+const max = Math.max(...arr);
+```
+
+**NOTE:** The spread operator only works in-place, like in an argument to a function or an array literal.
+
+```js
+const arr1 = [2, 45, 4, 3];
+
+const a = ...arr1;
+// ERROR
+
+const arr2 = [...arr1];
+// arr2 will have contents of arr1
+```
+
+## Destructuring Assignment
+
+Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+
+- *ES5*:
+```js
+const book = { name: "Atomic Habits", pages: 250 };
+
+const name = book.name;
+const pages = book.pages;
+```
+
+- *ES6*:
+```js
+const { name, pages } = book;
+```
+
+To give a different variable name, use:
+```js
+const { name: bookName, pages: bookPages } = book;
+```
+
+> `book.name` stored in the variable `bookName` and `book.pages` stored in `bookPages`
+
+You could also use destructing assginment for nested objects:
+
+```js
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
+```
+
+> `low` value of `today` will be assigned to the variable `lowToday`
+> `high` value of `today` will be assigned to the variable `highToday`
+
+You could destructure arrays!
+
+```js
+const [a, b,,c] = [1, 2, 3, 4, 5];
+// a = 1
+// b = 2
+// c = 4
+```
+
