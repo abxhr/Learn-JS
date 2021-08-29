@@ -210,7 +210,7 @@ const setup = `My CPU is ${pc.cpu}
 My RAM is ${pc.ram}`;
 ```
 
-# `class` Syntax
+## `class` Syntax
 
 In ES5, we usually define a constructor function and use the new keyword to instantiate an object.
 
@@ -326,4 +326,82 @@ export default function (x, y) {
 
 ```js
 import sub from "./math_func.js";
+```
+
+## Promise
+
+The `Promise` object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+It takes a function as its argument (with two parameters - `resolve` and `reject`).
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+
+});
+```
+
+>- The `resolve` parameter is used when you want your promise to succeed.
+>
+>- The `reject` parameter is used when you want it to fail.
+
+- Promise has three states: 
+  - `pending`
+  - `fulfilled`
+  - `rejected`
+
+```js
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer;
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+```
+
+### Handling Fulfilled Promise
+
+Promises are most useful when you have a process that takes an unknown amount of time in your code (i.e. something asynchronous), often a server request.
+
+To do a task after a promise is fulfilled, use `then` method.
+
+```js
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+})
+```
+
+### Handling Rejected Promise
+
+To handle a rejected promise, we use the `catch` method.
+
+```js
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer = false;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+makeServerRequest.catch(error => {
+  console.log(error);
+});
 ```
