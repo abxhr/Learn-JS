@@ -232,3 +232,98 @@ class SpaceShuttle {
 const zeus = new SpaceShuttle('Jupiter');
 ```
 
+## `getters` and `setters`
+
+You can obtain values from an object and set the value of a property within an object.
+
+```js
+class Car {
+  constructor (name) {
+    this._name = name;
+  }
+  // getter
+  get name() {
+    return this._name;
+  }
+  // setter
+  set name(updatedName) {
+    this._name = updatedName;
+  }
+}
+const sport = new Car('Lamborghini`);
+console.log(sport.name);
+// Lamborghini
+sport.name = 'Ferrari';
+console.log(sport.name);
+// Ferrari
+```
+
+## Module Script
+
+You could use JavaScript files as Module Scripts, wherein you can export parts of a file for use in one or more other files, and importing the parts you need, where you need them.
+
+```html
+<script type="module" src="filename.js"></script>
+```
+
+### `export`
+
+You could use the same JavaScript functions in various other JavaScript files, using `export` keyword to export the required functions.
+
+- For one function:
+```js
+export const add = (x, y) => {
+  return x + y;
+}
+```
+
+- For multiple functions:
+```js
+const add = (x, y) => {
+  return x + y;
+}
+
+const sub = (x, y) => {
+  return x - y;
+}
+
+export { add, sub };
+```
+
+### `import`
+
+`import` allows you to choose which parts of a file or module to load.
+
+```js
+import { add, sub } from './math_func.js';
+```
+
+- To import all the content from a file:
+
+```js
+import * as mathModule from './math_func.js';
+```
+
+### `export default`
+
+Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+
+```js
+export default function sub(x, y) {
+  return x - y;
+}
+
+export default function (x, y) {
+  return x - y;
+}
+```
+
+**NOTE**:
+- You can only have one value be a default export in each module or file.
+- You cannot use `export default` with `var`, `let`, or `const`.
+
+#### Importing Export Default
+
+```js
+import sub from "./math_func.js";
+```
