@@ -178,3 +178,57 @@ const [a, b,,c] = [1, 2, 3, 4, 5];
 // c = 4
 ```
 
+### Destructuring Function Parameter
+
+Instead of writing,
+
+```js
+const userUpdate = (userData) => {
+  const { name, age, location } = userDate;
+}
+```
+
+You could also write it as,
+
+```js
+const userUpdate = ({ name, age, location }) => {
+
+}
+```
+
+## Template Literals
+
+Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+
+```js
+const pc = {
+  cpu: "Intel",
+  ram: 32
+};
+
+const setup = `My CPU is ${pc.cpu}
+My RAM is ${pc.ram}`;
+```
+
+# `class` Syntax
+
+In ES5, we usually define a constructor function and use the new keyword to instantiate an object.
+
+```js
+var SpaceShuttle = function(targetPlanet){
+  this.targetPlanet = targetPlanet;
+}
+var zeus = new SpaceShuttle('Jupiter');
+```
+
+The `class` syntax simply replaces the `constructor` function:
+
+```js
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+const zeus = new SpaceShuttle('Jupiter');
+```
+
