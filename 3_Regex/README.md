@@ -35,3 +35,70 @@ let result = petRegex.test(petString);
 // returns true
 ```
 
+## `.match()`
+
+The `match()` function works opposite to `test()`.
+
+```js
+'string'.match(/regex/);
+/regex/.test('string');
+```
+
+Using the `match()` function, returns when a "match" is found.
+
+```js
+let strRegex = /some/;
+let str = "This is some str";
+str.match(strRegex);
+// Returns ["str"]
+```
+
+To find multiple "matches" instead of one, use the `g` flag.
+
+```js
+let repeatRegex = /again/g;
+let str = "again and again and again";
+str.match(repeatRegex);
+// Returns ["again", "again", "again"]
+```
+
+## Wildcard
+
+Using the wildcard operators allows you to match for 0 or any number of characters.
+
+```js
+let myRegex = /ha./;
+// This regex would match with hat, ham, had
+```
+
+## Character Classes
+
+To match a class of characters at a particular position, you could use character classes.
+
+```js
+let bgRegex = /b[aiu]g/; 
+let bigStr = "big";         // Matches the regex
+let bagStr = "bag";         // Matches the regex
+let bugStr = "bug";         // Matches the regex
+let bogStr = "bog";         // Doesn't match the regex
+```
+
+To include a range of characters, you could use the `-` character.
+
+```js
+let bgRegex = /b[a-d]s/;
+```
+
+You could also include numbers.
+
+```js
+let bgRegex = /b[a-z0-9]i/;
+```
+
+You could also create a negated chracter set, where only the characters that are *not* part of the set are matched.
+
+```js
+let bgRegex = /b[^aeiou]/gi;
+// Only the characters which are not a vowel (including symbols) will be matched
+```
+
